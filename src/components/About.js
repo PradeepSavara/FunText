@@ -31,7 +31,9 @@ function About(props) {
     const image = 
     {
         borderRadius:'50%',
-        border:'3px solid aqua'
+        border:'none',
+        width:'400px',
+        margin:'50px'
     }
     const hello =
     {
@@ -42,16 +44,17 @@ function About(props) {
         fontSize:'20px'
     }
   return (
-    <div className={`container-fluid text-${props.mode === 'light'?'dark':'white'}`} style={about}>
+    <div className={`row container-fluid text-${props.mode === 'light'?'dark':'white'}`} style={about}>
         
-     <h2 className='para' style={intro}>
+     <h2 className='para col-md-6' style={intro}>
         <h1 style={hello}>Hello <i className='bx bxs-hand' style={smile} onMouseEnter={()=>setHover(true)} onMouseLeave={()=> setHover(false)}></i>,</h1>
          I'm a <h1 style={myname}>Freelancer Digital Designer and Developer. </h1>
          <p style={int}>I can build websites using front-end and back-end languages.I make the stuff that looks good 
             and works great on planet Earth.
          </p>
      </h2>
-     <img src='sp.jpg' alt='Pradeep Savara' style={image}/>
+     <img src='sp.jpg' alt='Pradeep Savara' style={image} className='col-md-6'/>
+     
     </div>
   )
 }
