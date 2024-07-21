@@ -33,7 +33,7 @@ function About(props) {
         borderRadius:'50%',
         border:'none',
         width:'400px',
-        margin:'50px'
+        margin:'20px'
     }
     const hello =
     {
